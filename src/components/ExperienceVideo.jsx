@@ -11,10 +11,7 @@ export default function ExperienceVideo() {
   const prefersStatic = usePrefersStaticMedia()
   const [videoFailed, setVideoFailed] = useState(false)
 
-  if (!ENABLE_BACKGROUND_VIDEO) {
-    return null
-  }
-
+  // Background video check removed; rendering with fallback image instead.
   const showVideo = !prefersStatic && !videoFailed
 
   return (
@@ -28,20 +25,7 @@ export default function ExperienceVideo() {
           className="experience-video__fallback"
           style={{ backgroundImage: `url("${BACKGROUND_VIDEO_FALLBACK}")` }}
         />
-        {showVideo && (
-          <video
-            className="experience-video__video"
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster={BACKGROUND_VIDEO_POSTER}
-            onError={() => setVideoFailed(true)}
-            aria-hidden="true"
-          >
-            <source src={BACKGROUND_VIDEO_URL} type="video/mp4" />
-          </video>
-        )}
+        {/* Video element removed to avoid the unrelated stock video. Using fallback image instead. */}
         <div className="experience-video__overlay" />
       </div>
 

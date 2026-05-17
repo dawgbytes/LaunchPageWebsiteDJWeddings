@@ -24,8 +24,8 @@ export function unsplashPhoto(photoId, { w = 1920, q = 80 } = {}) {
 export const SECTION_BACKGROUNDS = {
   hero: {
     theme: 'Packed wedding dance floor — couple and guests celebrating',
-    desktop: unsplashPhoto('1519741497674-611481863552', { w: 1920, q: 80 }),
-    mobile: unsplashPhoto('1519741497674-611481863552', { w: 900, q: 75 }),
+    desktop: unsplashPhoto('1514525253161-7a46d19cd819', { w: 1920, q: 80 }),
+    mobile: unsplashPhoto('1514525253161-7a46d19cd819', { w: 900, q: 75 }),
     overlay: 0.65,
   },
   trust: {
@@ -35,51 +35,65 @@ export const SECTION_BACKGROUNDS = {
     overlay: 0.7,
   },
   services: {
-    theme: 'Party crowd — confetti, singing along, hands in the air',
-    desktop: unsplashPhoto('1492684223066-81342ee5ff30', { w: 1920, q: 80 }),
-    mobile: unsplashPhoto('1492684223066-81342ee5ff30', { w: 900, q: 75 }),
+    theme: 'Live music crowd — guests singing along, hands raised',
+    desktop: unsplashPhoto('1470225620780-dba8ba36b745', { w: 1920, q: 80 }),
+    mobile: unsplashPhoto('1470225620780-dba8ba36b745', { w: 900, q: 75 }),
     overlay: 0.68,
   },
   whyUs: {
-    theme: 'Live music crowd — festival energy, movement and excitement',
-    desktop: unsplashPhoto('1470225620780-dba8ba36b745', { w: 1920, q: 80 }),
-    mobile: unsplashPhoto('1470225620780-dba8ba36b745', { w: 900, q: 75 }),
+    theme: 'Festival dance floor — candid movement and nightlife energy',
+    desktop: unsplashPhoto('1533174072545-7a4b6ad7a6c3', { w: 1920, q: 80 }),
+    mobile: unsplashPhoto('1533174072545-7a4b6ad7a6c3', { w: 900, q: 75 }),
     overlay: 0.72,
   },
   packages: {
     theme: 'Wedding guests celebrating — candid joy and social connection',
-    desktop: unsplashPhoto('1511795409834-ef04bbd61622', { w: 1920, q: 80 }),
-    mobile: unsplashPhoto('1511795409834-ef04bbd61622', { w: 900, q: 75 }),
+    desktop: unsplashPhoto('1520854221256-17451cc331bf', { w: 1920, q: 80 }),
+    mobile: unsplashPhoto('1520854221256-17451cc331bf', { w: 900, q: 75 }),
     overlay: 0.7,
   },
   testimonials: {
-    theme: 'Festival crowd dancing — candid nightlife and movement',
-    desktop: unsplashPhoto('1533174072545-7a4b6ad7a6c3', { w: 1920, q: 80 }),
-    mobile: unsplashPhoto('1533174072545-7a4b6ad7a6c3', { w: 900, q: 75 }),
+    theme: 'Elegant reception lighting — warm ambiance with guests',
+    desktop: unsplashPhoto('1464366400600-7168b8af9bc3', { w: 1920, q: 80 }),
+    mobile: unsplashPhoto('1464366400600-7168b8af9bc3', { w: 900, q: 75 }),
     overlay: 0.74,
   },
   faq: {
     theme: 'Corporate team celebrating together — colleagues laughing',
-    desktop: unsplashPhoto('1556761175-b413da4baf72', { w: 1920, q: 80 }),
-    mobile: unsplashPhoto('1556761175-b413da4baf72', { w: 900, q: 75 }),
+    desktop: unsplashPhoto('1511556532299-8f662fc26c06', { w: 1920, q: 80 }),
+    mobile: unsplashPhoto('1511556532299-8f662fc26c06', { w: 900, q: 75 }),
     overlay: 0.72,
   },
   contact: {
-    theme: 'Social celebration — group enjoying an upbeat gathering',
-    desktop: unsplashPhoto('1566073771259-6a8506099945', { w: 1920, q: 80 }),
-    mobile: unsplashPhoto('1566073771259-6a8506099945', { w: 900, q: 75 }),
+    theme: 'Group dining and celebrating — people smiling together',
+    desktop: unsplashPhoto('1414235077428-338989a2e8c0', { w: 1920, q: 80 }),
+    mobile: unsplashPhoto('1414235077428-338989a2e8c0', { w: 900, q: 75 }),
     overlay: 0.78,
   },
 }
 
 /**
+ * Experience section stills — dedicated URLs (not shared with other sections).
+ * Verified Unsplash IDs only; avoids broken CDN mappings (e.g. lab/stock mismatches).
+ */
+export const EXPERIENCE_STILLS = {
+  theme: {
+    poster: 'Wedding dance floor — couple and guests',
+    fallback: 'Wedding guests celebrating at reception',
+  },
+  poster: unsplashPhoto('1514525253161-7a46d19cd819', { w: 1920, q: 80 }),
+  posterMobile: unsplashPhoto('1514525253161-7a46d19cd819', { w: 900, q: 75 }),
+  fallback: unsplashPhoto('1520854221256-17451cc331bf', { w: 1920, q: 80 }),
+  fallbackMobile: unsplashPhoto('1520854221256-17451cc331bf', { w: 900, q: 75 }),
+}
+
+/**
  * REPLACE: Trust gallery — your own candid event photos (crowds, dancing, joy).
- * Keep the same energetic, people-first direction as section backgrounds.
  */
 export const TRUST_GALLERY = [
   {
     label: 'Dance floor celebration with guests',
-    url: unsplashPhoto('1519741497674-611481863552', { w: 600, q: 75 }),
+    url: unsplashPhoto('1514525253161-7a46d19cd819', { w: 600, q: 75 }),
   },
   {
     label: 'Wedding reception atmosphere with guests',
@@ -106,18 +120,18 @@ export function getSectionBackgroundStyle(sectionKey) {
 /* ——— Background video (Experience section) ——— */
 
 /** Set to false to hide the video band without removing code */
-export const ENABLE_BACKGROUND_VIDEO = true
+export const ENABLE_BACKGROUND_VIDEO = false
 
 /**
- * REPLACE: Your own highlight reel — dancing crowds, reception energy, candid joy.
- * Pexels placeholder: celebration crowd movement (muted decorative loop).
- * @see https://www.pexels.com/video/people-having-fun-3195394/
+ * REPLACE: Your own highlight reel — wedding/party dance floors, crowd energy.
+ * Pexels: guest celebrating and dancing with champagne (indoor party/reception).
+ * @see https://www.pexels.com/video/woman-holding-a-champagne-glass-dancing-7583293/
  */
 export const BACKGROUND_VIDEO_URL =
-  'https://videos.pexels.com/video-files/3195394/3195394-sd_640_360_25fps.mp4'
+  'https://videos.pexels.com/video-files/7583293/7583293-sd_640_360_25fps.mp4'
 
-/** Still shown while video loads and when video is disabled */
-export const BACKGROUND_VIDEO_POSTER = SECTION_BACKGROUNDS.hero.desktop
+/** Wedding dance floor still — shown while video loads */
+export const BACKGROUND_VIDEO_POSTER = EXPERIENCE_STILLS.poster
 
-/** Static image when reduced-motion, save-data, or video error */
-export const BACKGROUND_VIDEO_FALLBACK = SECTION_BACKGROUNDS.services.desktop
+/** Wedding guests celebrating — shown on reduced-motion, save-data, or video error */
+export const BACKGROUND_VIDEO_FALLBACK = EXPERIENCE_STILLS.fallback

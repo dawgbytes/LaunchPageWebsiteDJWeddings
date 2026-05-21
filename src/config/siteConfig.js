@@ -3,22 +3,22 @@
  */
 
 // REPLACE: Your company / DJ brand name
-export const COMPANY_NAME = 'Lumen Sound Events'
+export const COMPANY_NAME = 'DJ Bobby Jones Events'
 
 // REPLACE: Tagline or short descriptor (optional, used in footer)
 export const TAGLINE = 'DJ & event entertainment'
 
 // REPLACE: Phone number (display format)
-export const PHONE = '(555) 123-4567'
-export const PHONE_HREF = 'tel:+15551234567'
+export const PHONE = '(984)328-3903'
+export const PHONE_HREF = 'tel:+19843283903'
 
 // REPLACE: Email address
-export const EMAIL = 'hello@lumensound.example'
-export const EMAIL_HREF = 'mailto:hello@lumensound.example'
+export const EMAIL = 'robertj8845@gmail.com'
+export const EMAIL_HREF = 'mailto:robertj8845@gmail.com'
 
 // REPLACE: Service area description
 export const SERVICE_AREA =
-  'Greater Metro Area and surrounding counties — travel available on request'
+  'Raleigh, NC Greater Metro Area and surrounding counties — travel available on request'
 
 // REPLACE: Social profile URLs (use # until ready)
 export const SOCIAL_LINKS = {
